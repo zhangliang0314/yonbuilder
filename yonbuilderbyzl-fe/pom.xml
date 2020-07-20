@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.yonyou.mdd.mdf</groupId>
+  <artifactId>developplatform</artifactId>
+  <version>1.0.0</version>
+  <packaging>war</packaging>
+  <dependencies></dependencies>
+  <build>
+    <finalName>ROOT</finalName>
+    <plugins>
+      <plugin>
+        <groupId>com.github.eirslett</groupId>
+        <artifactId>frontend-maven-plugin</artifactId>
+        <version>1.9.1</version>
+        <executions>
+          <execution>
+            <id>install node and npm</id>
+            <goals>
+              <goal>install-node-and-npm</goal>
+            </goals>
+            <phase>generate-sources</phase>
+          </execution>
+          <execution>
+         <id>npm install</id>
+         <goals>
+           <goal>npm</goal>
+         </goals>
+         <phase>generate-resources</phase>
+         <configuration>
+           <arguments>--registry http://maven.yonyou.com/nexus/repository/ynpm-all/ install</arguments>
+         </configuration>
+       </execution>
+          <execution>
+            <id>npm config prefix</id>
+            <goals>
+              <goal>npm</goal>
+            </goals>
+            <phase>process-sources</phase>
+            <configuration>
+              <arguments> config set prefix "/usr/local/maven/local/repo"</arguments>
+            </configuration>
+          </execution>
+          <execution>
+            <id>npm config cache</id>
+            <goals>
+              <goal>npm</goal>
+            </goals>
+            <phase>process-sources</phase>
+            <configuration>
+              <arguments> config set cache "/usr/local/maven/local/repo"</arguments>
+            </configuration>
+          </execution>
+          <execution>
+            <id>npm run build:client</id>
+            <goals>
+              <goal>npm</goal>
+            </goals>
+            <phase>process-resources</phase>
+            <configuration>
+              <arguments>run build:client</arguments>
+            </configuration>
+          </execution>
+          <!-- fix: server端编译不常见. 为提高编译速度,改成在客户端构建后提交到服务器上-->
+<!--
+          <execution>
+            <id>npm run build:server</id>
+            <goals>
+              <goal>npm</goal>
+            </goals>
+            <phase>process-resources</phase>
+            <configuration>
+              <arguments>run build:server</arguments>
+            </configuration>
+          </execution>
+-->
+        </executions>
+        <configuration>
+          <nodeVersion>v12.2.0</nodeVersion>
+          <npmVersion>6.9.0</npmVersion>
+          <nodeDownloadRoot>http://172.20.56.151/nodejs/</nodeDownloadRoot>
+          <npmDownloadRoot>http://172.20.56.151/nodejs/</npmDownloadRoot>
+        </configuration>
+      </plugin>
+
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-antrun-plugin</artifactId>
+        <executions>
+          <execution>
+            <phase>compile</phase>
+            <goals>
+              <goal>run</goal>
+            </goals>
+            <configuration>
+              <tasks>
+                <copy overwrite="true" toDir="${project.build.directory}/ROOT/static/">
+                  <fileset dir="${basedir}/static/"></fileset>
+                </copy>
+                <copy overwrite="true" toDir="${project.build.directory}/ROOT/">
+                  <fileset file="bin.js"></fileset>
+                </copy>
+                <copy overwrite="true" toDir="${project.build.directory}/ROOT">
+                  <fileset file="env.json"></fileset>
+                </copy>
+                <copy overwrite="true" toDir="${project.build.directory}/ROOT">
+                  <fileset file="start.sh"></fileset>
+                </copy>
+              </tasks>
+            </configuration>
+          </execution>
+<!--
+          <execution>
+            <id>rname</id>
+
+            <phase>package</phase>
+            <goals>
+              <goal>run</goal>
+            </goals>
+            <configuration>
+              <tasks>
+                <move file="${project.build.directory}/ROOT.war" tofile="${project.build.directory}/developplatform.zip" />
+              </tasks>
+            </configuration>
+          </execution>
+-->
+        </executions>
+      </plugin>
+    </plugins>
+  </build>
+</project>

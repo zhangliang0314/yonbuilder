@@ -1,0 +1,70 @@
+:global .backbill-drawer {
+    position: relative;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+}
+:global .backbill-drawer .am-drawer-sidebar {
+    width: 6.7rem;
+    background-color: #fff;
+    overflow: hidden;
+    /* overflow: auto;
+    -webkit-overflow-scrolling: touch; */
+}
+:global .backbill-drawer .am-drawer-sidebar .am-list {
+    width: 300px;
+    padding: 0;
+}
+:global .am-search-input {
+    z-index: 0;
+}
+:global .pro_contains_item_v{
+    display:flex;
+    background-color: #fff;
+}
+
+:global .pro_contains_item_v img{
+    width: 1.2rem;
+    height:100%;
+    border:#f2f2f2 solid 1px;
+}
+:global .pro_item_v{
+    flex: 1;
+    display: flex;
+    flex-flow: column;
+    margin-left: 0.2rem;
+    
+}
+:global .back_bill_settle_cls{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    background-color: #fff;
+    text-align: center;
+    vertical-align: middle;
+    border-top:#ddd solid 1px;
+    height: 0.9rem;
+    line-height: 0.9rem;
+}
+:global .back_bill_settle_cls .am-checkbox-item{
+    float: left;
+}
+:global .back_bill_settle_cls .am-button{
+    float: right;
+}
+:global .product_info_num_cls{
+    flex: 1;
+}
+:global .product_info_num_cls .am-input-label{
+    width: auto;
+}
+:global .backbill_info_cls{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    height: 100%;
+    width: 100%;
+    background-color: #fff;
+}

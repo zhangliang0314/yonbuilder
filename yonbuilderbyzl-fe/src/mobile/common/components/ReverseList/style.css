@@ -1,0 +1,85 @@
+:global .reserve_list_item_c{
+
+    border-top: #f3f3f3 solid 5px;
+    line-height: .8rem;
+}
+:global(.reserve_list_bar_01){
+    padding: 0 0.2rem;
+    border-bottom: #ddd solid 1px;
+}
+
+:global .reserve_list_bar_02{
+    padding: 0 0.2rem;
+}
+
+:global .reserve_pros_item{
+    display: flex;
+
+}
+
+:global .reserve_pros_item .pro_tab{
+    flex: 1;
+    height:60px;
+    overflow: hidden;
+    margin-top: .3rem;
+}
+
+:global .reserve_pros_item .pro_item_c{
+    height:60px;
+    width: 60px;
+    border:#eee solid 1px;
+    float: left;
+    margin:0 0.3rem 0 0;
+}
+
+:global .reserve_list_bar_01  .status_tab{
+   float: right;
+}
+
+:global(.reserve_list_bar_04){
+    padding: 0 0.2rem;
+    border-top: #ddd solid 1px;
+}
+
+:global .reserve_list_bar_04  .btn_tab{
+    float: right;
+ }
+
+ :global .reserve_list_bar_04  button{
+     margin-left: 0.3rem;
+ }
+  :global .return-top{
+    width: 0.8rem;
+    height: 0.8rem;
+    opacity: 0.8;
+    background: #FFFFFF;
+    box-shadow: 0 5px 15px 0 #CCCCCC;
+    border-radius: 100rem;
+    position: fixed;
+    bottom: 0.3rem;
+    right: 0.3rem;
+    z-index: 100;
+ }
+:global .return-top svg{
+    width: 0.6rem;
+    height: 0.6rem;
+    margin-top: 0.1rem;
+    margin-left: 0.1rem;
+}
+:global .reserve_contail_c .am-tabs-pane-wrap{
+    overflow-y: inherit;
+}
+:global .reserves_list_view_tip{
+    position: fixed;
+    z-index: 90;
+    top:1.28rem;
+    z-index:0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    padding: 25px 0;
+    display: none;
+}
+:global .meta-container .am-tabs-pane-wrap-active{
+    overflow-y: hidden;
+}

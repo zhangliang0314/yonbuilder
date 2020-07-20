@@ -1,0 +1,15 @@
+{
+  "dependencies": {
+    "@mdf/cube": "~2.3.0",
+    "@mdf/metaui-mobile": "~2.3.0",
+    "@mdf/metaui-web": "~2.3.0",
+    "@mdf/metaui-web-ncc": "~2.3.0",
+    "@mdf/middlewares-auth": "~2.3.0",
+    "@mdf/middlewares-log4js": "~2.3.0",
+    "@mdf/plugin-meta": "~2.3.0",
+    "@mdf/rendersdk": "~2.3.0",
+    "@mdf/theme-default": "~2.3.0",
+    "@mdf/theme-mobile": "~2.3.0",
+    "@mdf/theme-ncc": "~2.3.0"
+  }
+}

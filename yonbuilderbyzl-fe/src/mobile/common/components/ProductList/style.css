@@ -1,0 +1,17 @@
+:global .pro_contains_item_v{
+    display:flex;
+    background-color: #fff;
+}
+
+:global .pro_contains_item_v img{
+    width: 1.2rem;
+    height:100%;
+    border:#f2f2f2 solid 1px;
+}
+:global .pro_item_v{
+    flex: 1;
+    display: flex;
+    flex-flow: column;
+    margin-left: 0.2rem;
+    
+}

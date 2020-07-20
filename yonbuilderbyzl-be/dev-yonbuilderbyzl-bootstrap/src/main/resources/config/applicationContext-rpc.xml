@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.0.xsd"
+       default-lazy-init="true">
+
+    <description>RPC</description>
+
+    <bean id="rpcBillMapService"
+          class="com.yonyou.cloud.middleware.rpc.RPCBeanFactory">
+        <constructor-arg value="@spring.application.name@" />
+        <constructor-arg
+                value="c87e2267-1001-4c70-bb2a-ab41f3b81aa3" />
+        <constructor-arg>
+            <list>
+                <!-- 公共元数据接口 -->
+                <!--<value>com.yonyou.ucf.mdd.common.interfaces.rpc.ICommonQueryRPCService</value>-->
+                <!-- 公共元数据接口-给营销云用 -->
+                <!--<value>com.yonyoucloud.uretail.api.IBillQueryService</value>-->
+            </list>
+        </constructor-arg>
+    </bean>
+
+    <!-- 公共元数据接口bean-给营销云用 --><!-- 公共元数据接口bean -->
+    <!--<bean id="defaultBillQueryService"-->
+          <!--class="com.yonyou.ucf.uretail.mdd.service.impl.BillQueryServiceImpl" />-->
+
+</beans>

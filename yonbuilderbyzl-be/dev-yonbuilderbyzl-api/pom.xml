@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>yonbuilderbyzl</artifactId>
+        <groupId>com.yonyou.ucf</groupId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>dev-yonbuilderbyzl-api</artifactId>
+    <dependencies>
+        <dependency>
+            <groupId>com.yonyou.ucf</groupId>
+            <artifactId>ucf-mdf-app</artifactId>
+            <version>${ucf-mdf.version}</version>
+            <exclusions>
+                <exclusion>
+                    <artifactId>quartz</artifactId>
+                    <groupId>org.quartz-scheduler</groupId>
+                </exclusion>
+                <exclusion>
+                    <artifactId>spring-data-redis</artifactId>
+                    <groupId>org.springframework.data</groupId>
+                </exclusion>
+                <exclusion>
+                    <artifactId>jsr305</artifactId>
+                    <groupId>com.google.code.findbugs</groupId>
+                </exclusion>
+                <exclusion>
+                    <artifactId>iuap-utils</artifactId>
+                    <groupId>com.yonyou.iuap</groupId>
+                </exclusion>
+                <exclusion>
+                    <artifactId>iuap-log</artifactId>
+                    <groupId>com.yonyou.iuap</groupId>
+                </exclusion>
+                <exclusion>
+                    <artifactId>iuap-event-mybatis</artifactId>
+                    <groupId>com.yonyou.iuap</groupId>
+                </exclusion>
+                <exclusion>
+                    <artifactId>imeta-bize</artifactId>
+                    <groupId>org.imeta</groupId>
+                </exclusion>
+                <exclusion>
+                    <groupId>com.yonyou.diwork</groupId>
+                    <artifactId>diwork-framework-clientcache</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>com.yonyou.diwork</groupId>
+                    <artifactId>diwork-framework-exception</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>com.yonyou.diwork</groupId>
+                    <artifactId>diwork-framework-plugin</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>com.yonyou.diwork</groupId>
+                    <artifactId>diwork-pub-service</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+    </dependencies>
+
+
+</project>

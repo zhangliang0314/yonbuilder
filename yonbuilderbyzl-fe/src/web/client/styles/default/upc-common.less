@@ -1,0 +1,697 @@
+
+//样式缺失
+.container-browse-mode{
+  height: 100%;
+}
+
+
+
+// 左侧导航图标
+.icon-shangpindangan:before{
+    content: "\e709";
+  }
+  .icon-huopindangan:before{
+    content: "\e708";
+  }
+  .icon-shangpinfenlei:before{
+    content: "\e701";
+  }
+  .icon-shangpinpinpai:before{
+    content: "\e707";
+  }
+  .icon-shangpinguige:before{
+    content: "\e6ff";
+  }
+  .icon-shangpinbiaoqian:before{
+    content: "\e702";
+  }
+  .icon-jiliangdanwei:before{
+    content: "\e700";
+  }
+  .icon-shangpinshuxing:before{
+    content: "\e705";
+  }
+  .icon-shangpinmoban:before{
+    content: "\e703";
+  }
+  .icon-diannao:before{
+    content: "\e743";
+  }
+  .icon-shouji:before{
+    content: "\e741";
+  }
+  .anticon-plus-square-o:before{
+    content: "\E52A";
+  }
+  .anticon-minus-square-o:before{
+    content: "\E672";
+  }
+  .icon-yonghujijiaose:before{
+    content: "\E72a";
+  }
+  .icon-qitadangan:before{
+    content: "\e729";
+  }
+  .icon-xitongshezhi:before{
+    content: "\e728";
+  }
+  .icon-shangpinzhongxin:before{
+    content: "\e635";
+  }
+  .icon-jigourenyuan:before{
+    content: "\e62d";
+  }
+  .icon-keshangdangan:before{
+    content: "\e62c";
+  }
+  .icon-huaban1:before{
+    content: "\e779";
+  }
+  .viewCell .upload-content{
+    &:not(:first){margin-top: 0;}
+    // margin-left: -28px;
+    padding-top: 20px;
+    .ant-row{
+        margin-left: 0 !important;
+      }
+  }
+  // 商品详情电脑手机切换
+  .menu-management{
+    // margin-left: -28px;
+    // .ticket-opening{padding-left: 28px;}
+    .tab-list .ant-tabs-bar{display: none;}
+    .inventory-process{
+      padding:0 0 10px 15px;
+      width: auto;
+      margin: 0;
+      li{
+        float: left;
+        width: 80px;
+        text-align: center;
+        line-height: 100%;
+        cursor: pointer;
+        .inventory-process-img{
+          margin-top: 20px;
+          width: auto;
+          height: auto;
+          border:none;
+          border-radius: 0;
+          .icon {
+              width: 24px;
+              height: 24px;
+          }
+        }
+        &:after{display: none!important;}
+      }
+    }
+  }
+  // 调色板
+  .palette-control{
+    width: 20px;
+    height: 20px;
+    border: 1px solid #d9d9d9;
+    border-radius: 4px;
+  }
+  .basic-input-radiocolor{
+    .ant-row{
+      align-items: flex-start;
+      .label-control{line-height: 32px;}
+    }
+  }
+  .container-browse-mode{
+    .palette-control{border-color: #eee;}
+  }
+  .sketch-picker{margin: -8px 0;}
+  // 表单
+  .product-tag{white-space: normal;margin-top: -4px;}
+  .product-tag li{
+    display: inline-block;
+    border-radius: 2px;
+    line-height: 17px;
+    padding: 1px 5px;
+    margin: 0 5px 3px 0;
+    white-space:nowrap;
+    max-width: 112px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+  .listTableTagImg{
+    margin:0 0 0 10px!important;
+  }
+  .fixedDataTableCellLayout_wrap3{
+    .public_fixedDataTableCell_cellContent{
+      .product-list-item{
+        margin-top: -2px;
+          .product-list-item-img,img{
+            width: 40px!important;
+            height: 40px!important;
+            border-radius: 4px;
+            margin-top: 0;
+            margin-right: 10px;
+            float:left;
+          }
+          div{
+            float: left;
+          a{
+            display: inline-block;
+            line-height: 18px;
+            font-size: 12px;
+            height: 18px;
+            overflow: hidden;
+            max-width: 210px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+          }
+          p{
+            font-size: 12px;
+            color: #999;
+            line-height: 18px;
+            height: 18px;
+            overflow: hidden;
+          }
+        }
+      }
+      .textCol{
+        .ant-select{margin-top: -6px;}
+      }
+      .frequency{
+        .ant-select-selection{height: 28px;}
+        .ant-select-selection--multiple .ant-select-selection__rendered>ul>li{margin-top: 2px;}
+      }
+    }
+  }
+  // 查询条件
+  .listheadRow{
+      .btn-toolbar-bottom{
+          .ant-btn-primary{
+              margin-right: 10px;
+          }
+          .col-auto button{
+              &:last-child{
+                  margin-right: 0!important;
+              }
+          }
+      }
+  }
+  // 弹窗
+  .ant-modal{
+    .ant-modal-footer{ padding: 15px 30px;}
+    .ant-modal-body .padd-bottom-60{
+      padding-top: 0px;
+      padding-bottom: 20px!important;
+    }
+  }
+  .ant-modal-body{
+    // 弹窗一列宽度
+    .viewCell.width-percent-100 .ant-input, .viewCell.width-percent-100 .ant-select, .viewCell.width-percent-100 .input-control{
+      width: 320px!important;
+    }
+    .viewCell{padding-left: 28px;}
+  }
+  .line-tabs .ant-tabs-tabpane .ant-row:first-child{
+    .viewCell:first-child{margin-top: 30px;}
+    .has-related .viewCell{margin-top: 0;}
+  }
+  // 顶部无筛选条件-商品属性新增
+  .ant-tabs-tabpane{
+    .height-100{
+      .hide{
+        margin-bottom: 20px;
+      }
+    }
+    .list-top{padding-top: 40px;}
+  }
+  .container-browse-mode{
+    .list-top{margin-top: 20px; padding-top: 0;}
+    .container-greater-height{
+      padding-bottom: 20px;
+    }
+    .height-100{
+      .list-top-toolbar{
+        // margin-bottom: 10px;
+      }
+    }
+    .basic-input-textarea{
+      .input-control{
+        .control-text{
+          height: 52px;;
+        }
+      }
+    }
+  }
+  // 左上角logo
+  .header .logo .icon {
+      width: 95px;
+      height: 95px;
+      margin-top: -18px;
+  }
+  .ant-tabs-content .container-edit-mode .ant-row.card-tabs .tab-top-right .col-auto button.ant-btn.no-border-radius.m-l-10, .ant-tabs-content .container-edit-mode .line-tabs .tab-top-right .col-auto button.ant-btn.no-border-radius.m-l-10{
+    width: auto;
+  }
+  // 企业信息默认图
+  .companyInfo-logo-img .avatar-uploader .ant-upload .info-person{
+    background-image:url(../default/images/logo_gray.png);
+    background-position: center;
+  }
+  .custom-logistics{
+    .has-related{
+      // .viewCell.width-percent-100{display: none;}
+      .control-text{width: 320px;}
+    }
+  }
+  #EnterpriseInformation{
+    padding-left: 20px!important;
+  }
+  .upload-tips{
+    position: absolute;
+    left: 140px;
+    width: 600px;
+    top: 0;
+    text-align: left;
+  }
+  // 业务信息多选
+  .meta-checkbox-container{
+    margin-bottom: 20px;
+    .label-control{
+      text-align: right;
+      width: 87px!important;
+      color: #666;
+      margin-right: 15px;
+      line-height: 16px;
+      max-height: 32px;
+      overflow: hidden;
+      min-width: 87px;
+      padding-left: 15px;
+      word-break: break-word;
+    }
+    .control-width{
+      display: flex;
+      align-items: center;
+      height: 32px;
+      .ant-checkbox-wrapper{margin-right: 8px;}
+    }
+  }
+  .ant-popover-filter-list{
+    height: 100%;
+    overflow:hidden;
+    position:relative;
+    margin: -3px 0;
+    .filter-btn-1 .ant-checkbox-wrapper{
+      margin-left: 9px!important;
+    }
+    .filter-list-content{
+      min-height: 50px;
+    }
+  }
+  .filter-list-search{}
+  .filter-list{max-height: 384px;width: 210px;overflow-x: hidden;}
+  .filter-list-content{
+    height: 100%;
+    overflow:hidden;
+    li{
+      &:hover{
+        background-color: #f3f5f9;
+        cursor: pointer;
+        &.no-item{
+          background-color: transparent;
+          cursor: inherit;
+        }
+      }
+      padding-left: 14px;
+      &.no-item{
+        padding-left: 0;
+        text-align: center;
+        margin-top: 10px;
+        color: #999;
+      }
+    }
+    .ant-input-affix-wrapper{
+      margin-bottom: 5px;
+      .ant-input-suffix{
+        right: 20px!important;
+        top:50%!important;
+      }
+      input{
+        margin:0 10px!important;
+      }
+    }
+  }
+  .filter-list-search-delete{
+    position:absolute;
+    top: 21px;
+    right:36px;
+    .ant-cascader-picker-clear{
+      opacity: 1;
+    }
+  }
+  .ant-tabs-tabpane .group-container .ant-row div:not(:first-child) .group-title{
+    margin-top: 15px;
+  }
+  .twoInclusion+.ant-row-flex+.listTable{
+    margin-top: 10px;
+  }
+  .register-info-logo {
+    float: left;
+    width: 80px;
+    height: 80px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #e4e4e4;
+    margin-top: 50px;
+    margin-left: 60px;
+    margin-bottom: 5px;
+  }
+  .register-info-detial {
+    min-width:190px;
+    float: left;
+    margin-left: 20px;
+    .register-info-time{
+      display: flex;
+      .register-info-time-key{
+        width: auto;
+      }
+    }
+    .ant-btn{
+      background: linear-gradient(-45deg,#FC4C2F  0%,  #F33244 100%);
+      border: none;
+      color: #fff;
+      width: 80px!important;
+      height: 26px!important;
+      line-height: 26px;
+      border-radius: 16px;
+      span{
+        font-size: 12px;
+      }
+      &:hover{
+        background: linear-gradient(-45deg,#F33244  0%,  #FC4C2F 100%);
+      }
+    }
+
+  }
+  .register-info-title {
+    color: #505766;
+    font-size: 16px;
+    margin-top: 60px;
+    font-weight: bold;
+
+    span {
+      display: inline-block;
+      border-radius: 3px;
+      font-size: 12px;
+      width: 48px;
+      line-height: 22px;
+      text-align: center;
+      margin-left: 8px;
+    }
+  }
+  .register-info-title .try {
+    border: 1px solid #7fcfb4;
+    color: #18b681;
+  }
+  .register-info-title .official {
+    color:#ff5735;
+    border:1px solid #ffb9ab;
+  }
+  .register-info-time {
+    font-size: 13px;
+    color: #999;
+    margin-top: 10px;
+  }
+  .register-info-time-key {
+    text-align: right;
+    padding-right: 10px;
+    }
+  .register-info-time-value {
+    color:#333;
+    }
+
+  .UMall{
+      background: url(./logo/UMall.png) no-repeat center;
+      background-size: 60% auto;
+  }
+  .UMember{
+      background: url(./logo/UMember.png) no-repeat center;
+      background-size: 60% auto;
+  }
+  .UOrder{
+      background: url(./logo/UOrder.png) no-repeat center;
+      background-size: 60% auto;
+  }
+  .URetail{
+      background: url(./logo/URetail.png) no-repeat center;
+      background-size: 80% auto;
+  }
+  .UStock{
+      background: url(./logo/UStock.png) no-repeat center;
+      background-size: 55% auto;
+  }
+  .ant-popover-placement-right>.ant-popover-content>.ant-popover-arrow:after, .ant-popover-placement-rightBottom>.ant-popover-content>.ant-popover-arrow:after, .ant-popover-placement-rightTop>.ant-popover-content>.ant-popover-arrow:after{
+    bottom: -8px;
+  }
+
+  /*数据权限设置*/
+  .roleControl{
+    .sensRole-header{
+      margin: 0 20px 0px 30px;
+      padding-top: 20px;
+      font-size: 14px;
+      color: #505766;
+      font-weight: bolder;
+    }
+    .sensRole-body{
+      margin: 0 20px 0px 30px;
+      padding-top: 10px;
+      .sensRoleRow{
+        label{
+          color: #666;
+        }
+        .roleRow-2.sensRole{
+          display: flex;
+          align-items: center;
+          .col-float{
+              .firstRole{
+                margin-left: 10px;
+              }
+              .second-row{
+                display: flex;
+                align-items: center;
+                min-height: 38px;
+                .col-float{
+                  .ant-checkbox-wrapper{
+                    margin-left: 10px;
+                  }
+                }
+              }
+              .third-row{
+                display: flex;
+                align-items: center;
+                min-height: 38px;
+                .ant-radio-group{
+                    line-height: 38px;
+                }
+                .ant-radio-wrapper{
+                    margin-left: 10px;
+                    margin-right: 0px;
+                }
+              }
+          }
+        }
+      }
+    }
+  }
+  /*只对应基础服务调整-机构人员-部门：左树搜索框的下拉浮层宽度调整*/
+  .ant-select-dropdown--single.ant-select-dropdown-placement-bottomLeft.ant-select-dropdown{min-width: 200px !important; width: 200px; max-width: 400px;}
+  /*基础服务-个人中心底部按钮问题*/
+  .meta-dynamic-view{
+    .info-content+.bottom-toolbar-self{
+      width: 100%!important;
+      left: 0px!important;
+      right: 0px!important;
+      bottom: 0px!important;
+      .m-l-148 {
+        margin-left: 125px!important;
+      }
+      .ant-btn {
+        padding: 0 27px!important;
+        height: 32px!important;
+        line-height: 32px!important;
+      }
+    }
+  }
+  /*资质信息-法人证件*/
+  .viewCell  .id-card-Front{
+    >.ant-row{
+      margin-bottom: 40px;
+    }
+    .id-card-Front>.ant-row{
+      margin-bottom: 0px;
+    }
+    .avatar-uploader,.basic-avatar-default{
+      height: 72px!important;
+    }
+    .basic-avatar-default .avatar-uploader{
+      width: 122px;
+      margin-right: 0px;
+    }
+    .has-related{
+      .viewCell{
+        width: 145px;
+      }
+      .viewSetting.viewCell.width-percent-100{
+        margin-left: 0px;
+        padding-left: 0px!important;
+      }
+    }
+    .input-control.control-width{
+      .info-person-mask{
+        line-height: 20px!important;
+        i{
+          margin-top: 8px!important;
+          margin-bottom: 0px!important;
+        }
+        p{
+          font-size: 12px;
+          width: 100%;
+        }
+      }
+      .viewCell .basic-avatar-default .avatar-uploader .info-person-01{
+        height: 72px;
+      }
+      .viewCell{
+        .info-person-01 .avatar-uploader-trigger {
+          background: url(./images/shenfenzheng-zheng.png) no-repeat center;
+          background-size: 120px 70px;
+          height: 70px;
+        }
+      }
+      .viewSetting.viewCell{
+        .info-person-01 .avatar-uploader-trigger{
+          background: url(./images/shenfenzhengfanmian.png) no-repeat center;
+          background-size: 120px 70px;
+          height: 70px;
+        }
+      }
+    }
+    .input-bottom-text{
+      bottom: -25px;
+      color: #ccc;
+    }
+  }
+  /*资质信息-营业执照*/
+  .viewCell .id-card-license{
+    >.ant-row{
+      margin-bottom: 40px;
+    }
+    .avatar-uploader,.basic-avatar-default{
+      height: 72px!important;
+    }
+    .input-control.control-width{
+      .basic-avatar-default .avatar-uploader .info-person-01{
+        height: 72px;
+        width: 100px;
+      }
+      .avatar-uploader .info-person-01 .avatar-uploader-trigger{
+        background: url(./images/yingyezhizhao.png) no-repeat center;
+        background-size: 100px 70px;
+        height: 70px;
+      }
+      .info-person-mask{
+        line-height: 20px!important;
+        i{
+          margin-top: 8px!important;
+          margin-bottom: 0px!important;
+        }
+        p{
+          font-size: 12px;
+          width: 100%;
+        }
+      }
+    }
+    .input-bottom-text{
+      bottom: -25px;
+      color: #ccc;
+    }
+  }
+  .merchant-fileupload{
+    .width-percent-50{
+      .upload-content>.ant-row{
+        display: block;
+      }
+    }
+      .fileupload{
+        width: 100%;
+        display: flex;
+        .ant-upload {
+          margin-top: -4px;
+        }
+        span{
+          display: block;
+          float: left;
+        }
+        .fileupload-txt{
+          width:  calc(~'100% - 86px');
+          line-height: 18px;
+          max-height: 36px;
+          margin-left: 3px;
+          margin-top: -2px;
+          .fileupload-txt{
+            width: 100%;
+          }
+        }
+      }
+  }
+
+  .hide-actionCell{
+    height: 28px;
+    background: #fff;
+    padding: 10px 12px;
+    position: absolute;
+    right: 0px;
+  }
+  .tree-table .expand-rows .expand-row .hide-actionCell{
+    background: #fff!important;
+  }
+  .tree-table .expand-rows .expand-row-selected .hide-actionCell,
+  .tree-table .public_fixedDataTable_bodyRow .fixedDataTableRowLayout_body:hover .hide-actionCell,
+  .public_fixedDataTableRow_selected .hide-actionCell
+  {
+    background: #edf1f7!important;
+  }
+
+  /*商品中心-商品分类-无广告图片*/
+  .container-browse-mode{
+    .width-percent-100 .control-width{
+      .basic-avatar-default{
+        max-width: 120px;
+        height: 60px;
+        border-radius: 4px;
+        display: block;
+      }
+      .no-avatar-man.basic-avatar-default{
+           background: url(./logo/default-logo22_03.png) no-repeat center #f6f6f6;
+           width: 122px;
+           height: 62px;
+           border: 1px solid #efefef;
+           border-radius: 4px;
+           text-align: center;
+           background-size: auto 60px;
+        }
+    }
+    .width-percent-50 .control-width{
+      .basic-avatar-default{
+        max-width: 120px;
+        height: 60px;
+        border-radius: 4px;
+        display: block;
+      }
+      .no-avatar-man.basic-avatar-default{
+           background: url(./logo/default-logo22_03.png) no-repeat center #f6f6f6;
+           width: 122px;
+           height: 62px;
+           border: 1px solid #efefef;
+           border-radius: 4px;
+           text-align: center;
+           background-size: auto 60px;
+        }
+    }
+  }

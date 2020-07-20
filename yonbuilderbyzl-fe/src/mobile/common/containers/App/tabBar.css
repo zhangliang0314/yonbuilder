@@ -1,0 +1,23 @@
+.tabBarWrap {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top: 0;
+}
+.tabBarTitle {
+  width: 100%;
+  height: 0.88rem;
+  background: #fff;
+  color: #000;
+  text-align: center;
+  font-size: 0.36rem;
+  line-height: 0.88rem;
+  padding-top: 0.4rem;
+}
+.page-info {
+  width: 100%;
+  color: #333;
+  font-size: 20px;
+  line-height: 30px;
+  text-align: center;
+}

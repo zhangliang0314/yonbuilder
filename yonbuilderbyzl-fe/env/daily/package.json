@@ -1,0 +1,15 @@
+{
+  "dependencies": {
+    "@mdf/cube": "snapshot",
+    "@mdf/metaui-mobile": "snapshot",
+    "@mdf/metaui-web": "snapshot",
+    "@mdf/metaui-web-ncc": "snapshot",
+    "@mdf/middlewares-auth": "snapshot",
+    "@mdf/middlewares-log4js": "snapshot",
+    "@mdf/plugin-meta": "snapshot",
+    "@mdf/rendersdk": "snapshot",
+    "@mdf/theme-default": "snapshot",
+    "@mdf/theme-mobile": "snapshot",
+    "@mdf/theme-ncc": "snapshot"
+  }
+}

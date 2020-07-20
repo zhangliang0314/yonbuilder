@@ -1,0 +1,3 @@
+export const MENU_INIT = 'MENU_INIT'
+export const MENU_INIT_SUCCESS = 'MENU_INIT_SUCCESS'
+export const MENU_INIT_FAILURE = 'MENU_INIT_FAILURE'

@@ -1,0 +1,425 @@
+
+.barcode_panel{
+    width: auto;
+    overflow: hidden;
+    flex: 1;
+    background: #222;
+}
+.barcode_view{
+    position: absolute;
+    top:0px;
+    left:0px;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    text-align: center;
+}
+:global .car_view{
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 1em 0 0 0;
+    padding-bottom: 0.2rem;
+}
+:global .scan_parent_view .car_view{
+    background-color: #000;
+    margin-top: 0;
+    padding-top: 0.2rem;
+}
+:global .scan_parent_view{
+    padding-top: 1.28rem;
+}
+.tab{
+    width: 100%;
+    height: auto;
+    color: #fff;
+}
+.tab_left_span{
+    float: left;
+    padding: 0 0.2rem;
+    position: absolute;
+    left: 0;
+}
+:global .tab_right_span{
+    width: 2.2rem;
+    height: 0.8rem;
+    font-size: 0.3rem;
+    text-align: center;
+    background: rgba(255,255,255,0.25);
+    border-radius: 200px;
+    display: block;
+    color: #fff;
+    line-height: 0.8rem;
+    float: left;
+}
+:global .tab_right_span:last-child{
+    margin-left: 1.2rem;
+}
+:global .tab_right_span i{
+    float: left;
+    margin-left: 26%;
+    margin-right: -20%;
+    font-size: .42rem;
+    margin-top:-1px;
+}
+:global .tab_right_span:first-child i{
+    margin-right: -7%;
+    margin-left: 11%;
+    font-size: 0.4rem;
+    margin-top: -1px;
+}
+:global .car_radius_v{
+    width: 1.6rem;
+    height: 1.6rem;
+    background: #fff;
+    border-radius: 6em;
+    color:#000;
+    text-align: center;
+    position: relative;
+}
+:global .car_radius_v svg{
+    width: 0.8rem;
+    height: 0.8rem;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-top: -0.6rem;
+    margin-left: -.4rem;
+}
+:global .car_radius_v p{
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    font-size: .20rem;
+    color: #505766;
+    bottom: .25rem;
+}
+:global .car_radius_v i{
+    background-image: -webkit-linear-gradient(bottom left, #ff7d4a, #ff3535);
+    background-image: -o-linear-gradient(bottom left, #ff7d4a, #ff3535);
+    background-image: linear-gradient(to top right, #ff7d4a, #ff3535);
+    border-radius: 200px;
+    height: .38rem;
+    line-height: .4rem;
+    color: #fff;
+    right: .25rem;
+    top: .2rem;
+    padding: 0 0.04rem;
+    min-width: .3rem;
+    position: absolute;
+    font-size: 0.13rem;
+}
+:global  .han_c_css .car_radius_v{
+    left: 50%;
+    margin-left: -0.8rem;
+    box-shadow: 0 0 30px 0 #E4E4E4;
+/*     width: 2rem;
+height: 2rem; */
+    margin-top: 0.8rem;
+}
+/* :global  .han_c_css .car_radius_v svg{
+    width: 1rem;
+    height: 1rem;
+    margin-left:-0.5rem;
+    margin-top: -0.65rem;
+}
+:global .han_c_css .car_radius_v p{
+    font-size: .26rem;
+    bottom: .25rem;
+} */
+.choose_ok_v{
+    background: transparent;
+    border: 0;
+    color: #fff;
+    margin: 1.5em 0 0 0;
+}
+.middle_v{
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+    display: flex;
+    flex-flow: column;
+}
+.containers_v{
+    flex:1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+    position: relative;
+}
+:global .scan_desc_v{
+    width: 5.6rem;
+    text-align: center;
+    color: #fff;
+    position: relative;
+    left: 50%;
+    margin-left: -2.8rem;
+    margin-top: 0.3rem;
+}
+.flashc_span_v{
+    width: 3em;
+    height: 3em;
+    background: #fff;
+    border-radius: 3em;
+    position: absolute;
+    top: .5em;
+    right: 0;
+}
+:global .han_c_css{
+    color:red!important;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    padding:0 0 20px 0;
+    z-index: 20;
+}
+
+:global .han_c_css .car_view{
+    background:#fff;
+
+}
+:global .han_c_css .bg{
+    background-image: url(~@mdf/theme-mobile/theme/images/scan-bg.png);
+    background-repeat: no-repeat;
+    background-position: right 0;
+    background-size: 100%;
+    width: 35%;
+    height: 18%;
+    position: fixed;
+    top: 0;
+    right: 0;
+}
+
+.han_c_css .am-wingblank.am-wingblank-lg{
+    background-color: #f00
+}
+.mdf_c_css{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 22;
+    background-color: rgba(0, 0, 0, 0.4);
+    justify-content: center;
+    align-items: center;
+}
+.mdf_c_pop_css{
+    width: 80%;
+    padding:10px;
+    height: auto;
+    background-color: #fff;
+}
+
+.co_style_v{
+    width: 100%;
+    display: flex;
+}
+.co_style_v span{
+    display: inline;
+    padding:1em;
+    background-color: #eee;
+}
+.oplm{
+    color:#222;
+}
+
+/***扫码**/
+:global .scan_prent_view{
+
+}
+/* 手工录入 */
+:global .han_c_css{
+    margin-top: 15%;
+}
+:global .han_c_css .am-wingblank.am-wingblank-lg{
+    margin:0 0.6rem;
+}
+:global .han_c_css .am-list-line{
+    padding: 0;
+}
+:global .han_c_css .am-list-line .am-input-control{
+    height: 1.2rem;
+    border-radius: 1rem;
+}
+:global .han_c_css .am-list-line input{
+    font-size: .40rem;
+    color: #333;
+    height: 1rem;
+    padding-right: 0.5rem;
+    border-bottom: 0.02rem solid  #E1E1E1;
+}
+:global .han_c_css .am-list-line,
+:global .han_c_css .am-list-item{
+    height: 1.2rem;
+    position: relative;
+}
+:global .han_c_css .am-list-line .am-input-clear{
+    position: absolute;
+    right: 0rem;
+    top: 0.3rem;
+}
+:global .han_c_css .am-list-line .am-input-clear-active{
+    background-color: #999;
+}
+:global .han_c_css .am-list-item.am-input-item{
+    padding-left: 0;
+}
+:global .han_c_css .am-list-item:not(:last-child) .am-list-line:after{
+    height: 0 !important;
+}
+:global .han_c_css .btns .am-button{
+    float: left;
+    width: 2.8rem;
+    height: 0.9rem;
+    background: rgba(255,255,255,0.2);
+    border-radius: 200px;
+    color: #fff;
+    line-height: 0.9rem;
+    font-size: 0.3rem;
+    color: #333;
+    border: 0.02rem solid  #979797;
+}
+:global .han_c_css .btns .am-button i{
+    font-size: 0.38rem;
+    float: left;
+    margin-right: -10%;
+    margin-left: 15%;
+    font-size: .4rem;
+    margin-top: .01rem;
+}
+:global .han_c_css .btns{
+    margin-top: 0.2rem;
+    position: relative;
+    left: 50%;
+    margin-left: -3rem;
+    width: 6rem;
+}
+:global .han_c_css .btns .am-button:last-child{
+    background-image: linear-gradient(-45deg, #FF3535 0%, #FF7D4A 100%);
+    color: #fff;
+    border:none;
+    margin-left: 0.4rem;
+    line-height: 0.9rem;
+}
+
+
+:global .mdf_c_pop_css{
+    background-color: #fff;
+    border-radius: 10px;
+    font-size: 0.36rem;
+    color: #333333;
+    text-align: center;
+    margin: 0 0.6rem;
+    width: 100%;
+    overflow: hidden;
+}
+:global .mdf_c_pop_css .title{
+    margin-bottom: .5rem;
+    padding: 0 .5rem;
+    line-height: .5rem;
+   /*  display: -webkit-box;
+   -webkit-box-orient: vertical;
+   -webkit-line-clamp: 3;
+   overflow: hidden; */
+}
+:global .mdf_c_pop_css .money{
+    font-size: 0.64rem;
+    color: #ee2223;
+}
+:global .mdf_c_pop_css .money i{
+    font-size: 0.5rem;
+    margin-right: 0.05rem;
+}
+:global .mdf_c_pop_css .am-wingblank.am-wingblank-lg{
+    margin:0;
+    padding-top: 0.45rem;
+}
+
+:global .mdf_c_pop_css .co_style_v{
+    width: 3.02rem;
+    height: .9rem;
+    background: #fff;
+    border: .02rem solid #ee2223;
+    border-radius: 2rem;
+    position: relative;
+    left: 50%;
+    margin-left: -1.51rem;
+    margin-top: 0.5rem;
+}
+:global .mdf_c_pop_css .co_style_v span{
+    float: left;
+    width: 0.81rem;
+    display: block;
+    height: 0.9rem;
+    line-height: 0.9rem;
+}
+:global .mdf_c_pop_css .co_style_v span i{
+    color: #ee2223;
+}
+:global .mdf_c_pop_css .co_style_v span i.icon-jian{
+    margin-left: 0.3rem;
+}
+:global .mdf_c_pop_css .co_style_v span i.icon-jia{
+    margin-right: 0.3rem;
+}
+:global .mdf_c_pop_css .co_style_v>div{
+    float: left;
+    width: 1.4rem;
+    text-align: center;
+    margin: 0 !important;
+}
+:global .mdf_c_pop_css .co_style_v>div .am-list-item.am-input-item{
+    padding-left: 0
+}
+:global .mdf_c_pop_css .co_style_v>div input{
+    text-align: center;
+    height: 0.9rem;
+    font-size: 0.5rem;
+    color: #333333;
+}
+:global .han_c_css input::placeholder{
+    font-size: 0.4rem !important;
+}
+
+:global .mdf_c_pop_css .co_style_v .am-list-line{
+    height: 0.9rem;
+}
+:global .mdf_c_pop_css .am-flexbox.am-flexbox-align-center{
+    height: 1rem;
+    border-top: 0.01rem solid #eee;
+    font-size: 0.36rem;
+    margin-top: 0.6rem;
+}
+:global .mdf_c_pop_css .am-flexbox.am-flexbox-align-center .am-flexbox-item{
+    margin: 0;
+}
+
+:global .mdf_c_pop_css .am-flexbox.am-flexbox-align-center a.am-button{
+    height: 1.2rem;
+    line-height: 1.2rem;
+    color: #ee2223;
+}
+:global .mdf_c_pop_css .am-flexbox.am-flexbox-align-center .am-flexbox-item:last-child{
+    background-image: linear-gradient(-45deg,#FF3535 0%,  #FF7D4A 100%);
+}
+:global .mdf_c_pop_css .am-flexbox.am-flexbox-align-center .am-flexbox-item:last-child a.am-button{
+    color: #fff;
+}
+
+
+:global .scan-nav{
+    color: #fff;
+    text-align: center;
+    height: 0.88rem;
+    line-height: 0.88rem;
+    font-size: 0.36rem;
+    position: fixed;
+    top: 0.4rem;
+    width: 100%;
+}

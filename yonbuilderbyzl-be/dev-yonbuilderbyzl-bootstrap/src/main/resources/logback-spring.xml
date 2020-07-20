@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<configuration>
+    <!--可通过环境变量设置领域名、应用名-->
+    <springProperty scope="context" name="spring.domain.name" source="spring.domain.name"/>
+    <springProperty scope="context" name="spring.application.name" source="spring.application.name"/>
+	<property name="logging.path" value="data/logs/app"/>
+	<property name="logging.path.javascript" value="data/logs/javascript"/>
+	<property name="COMMON_LOG_PATTERN"
+			  value="%date{yyyy-MM-dd HH:mm:ss.SSS} %-5level [%thread] [%logger{36}] [%X{traceId}] [%X{spanId}] [%X{pSpanId}] [%X{rpcOccurrence}] [%X{code}] [%X{req.requestURL}] [%X{req.queryString}] [${spring.domain.name},${spring.application.name},%X{sysId},%X{tenantId},%X{userId},%X{profile},%X{agentId}] - %msg %ex%n" />
+    <property name="CONSOLE_LOG_PATTERN"
+              value="%date{yyyy-MM-dd HH:mm:ss.SSS} %-5level [%thread] [%logger] [%X{req.requestURL}] - %msg %ex%n" />
+    <property name="JAVASCRIPT_LOG_PATTERN"
+			  value="%date{yyyy-MM-dd HH:mm:ss.SSS} %-5level [%thread] [%logger{36}] [%X{traceId}] [%X{spanId}] [%X{pSpanId}] [%X{rpcOccurrence}] [%X{code}] [%X{req.requestURL}] [%X{req.queryString}] [${spring.domain.name},${spring.application.name},%X{sysId},%X{tenantId},%X{userId},%X{profile},%X{agentId},%X{extScriptId}] [%X{busiCode}] - %msg %ex%n" />
+
+	<appender name="console"
+			  class="ch.qos.logback.core.ConsoleAppender">
+		<encoder>
+			<pattern>${CONSOLE_LOG_PATTERN}</pattern>
+		</encoder>
+	</appender>
+	<appender name="rollingFile"
+			  class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<file>${logging.path}/ucf-${spring.application.name}.log</file>
+		<rollingPolicy
+				class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<fileNamePattern>${logging.path}/ucf-${spring.application.name}.%d{yyyy-MM-dd}.log.bak
+			</fileNamePattern>
+		</rollingPolicy>
+		<encoder>
+			<pattern>${COMMON_LOG_PATTERN}</pattern>
+		</encoder>
+	</appender>
+
+	<appender name="consoleForJavascript"
+			  class="ch.qos.logback.core.ConsoleAppender">
+		<encoder>
+			<pattern>${JAVASCRIPT_LOG_PATTERN}</pattern>
+		</encoder>
+	</appender>
+	<appender name="rollingFileForJavascript"
+			  class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<file>${logging.path.javascript}/javascript-${spring.application.name}.log</file>
+		<rollingPolicy
+				class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<fileNamePattern>${logging.path}/javascript-${spring.application.name}.%d{yyyy-MM-dd}.log.bak
+			</fileNamePattern>
+		</rollingPolicy>
+		<encoder>
+			<pattern>${JAVASCRIPT_LOG_PATTERN}</pattern>
+		</encoder>
+	</appender>
+
+	<logger name="org.springframework" level="INFO"  />
+	<logger name="org.apache.tomcat" level="INFO"  />
+	<logger name="springfox" level="INFO"  />
+	<logger name="org.apache.ibatis.io" level="DEBUG"  />
+	<logger name="org.mybatis.spring" level="INFO"  />
+	<logger name="org.quartz.core" level="INFO"  />
+	<logger name="com.yonyou" level="DEBUG"  />
+    <logger name="com.yonyou.cloud.inotify" level="INFO" />
+    <logger name="com.zaxxer.hikari" level="INFO" />
+    <logger name="com.yonyou.diwork.common" level="ERROR"  />
+    <logger name="com.netflix.discovery" level="ERROR" />
+    <logger name="com.yonyou.ucf.mdf.javascript.console" level="TRACE" additivity="false">
+        <appender-ref ref="rollingFileForJavascript" />
+        <appender-ref ref="console" />
+    </logger>
+    <logger name="org.apache.http" level="ERROR" />
+    <logger name="com.netflix.config" level="ERROR" />
+    <logger name="com.yonyou.ucf.mdf.domain.script" level="WARN" />
+    <logger name="com.yonyou.cloud.yonscript.cache" level="WARN" />
+    <logger name="com.yonyou.cloud.middleware" level="ERROR"/>
+    <logger name="com.yonyou.cloud.mwclient.servmeta.utils" level="ERROR"/>
+    <logger name="com.yonyou.cloud.inotify" level="ERROR"/>
+	<root level="INFO">
+		<appender-ref ref="console" />
+		<appender-ref ref="rollingFile" />
+	</root>
+
+</configuration>
+

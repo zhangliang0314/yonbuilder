@@ -1,0 +1,34 @@
+{
+  "compilerOptions": {
+    "sourceMap": true,
+    "allowSyntheticDefaultImports": true,
+    "moduleResolution": "node",
+    "target": "es6",
+    "jsx": "react",
+    "declaration": false,
+    "noImplicitAny": false,
+    "noImplicitReturns": false,
+    "removeComments": true,
+    "strictNullChecks": false,
+    "lib": [
+      "es6",
+      "es7",
+      "dom"
+    ],
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "baseUrl": ".",
+    "paths": {
+      "src/*": [
+        "./src/*"
+      ]
+    }
+  },
+  "exclude": [
+    "node_modules0"
+  ],
+  "include": [
+    "types/**/*",
+    "src/**/*"
+  ]
+}

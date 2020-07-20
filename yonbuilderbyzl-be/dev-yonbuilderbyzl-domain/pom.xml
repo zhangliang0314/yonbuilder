@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>yonbuilderbyzl</artifactId>
+        <groupId>com.yonyou.ucf</groupId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>dev-yonbuilderbyzl-domain</artifactId>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.yonyou</groupId>
+            <artifactId>mdd-web</artifactId>
+            <exclusions>
+                <exclusion>
+                    <groupId>*</groupId>
+                    <artifactId>iuap-billcode-component</artifactId>
+                </exclusion>
+                <exclusion>
+                    <artifactId>slf4j-log4j12</artifactId>
+                    <groupId>org.slf4j</groupId>
+                </exclusion>
+                <exclusion>
+                    <artifactId>ucf-log</artifactId>
+                    <groupId>com.yonyou.iuap</groupId>
+                </exclusion>
+                <exclusion>
+                    <artifactId>uretail-common</artifactId>
+                    <groupId>com.yonyoucloud</groupId>
+                </exclusion>
+                <exclusion>
+                    <artifactId>iuap-billcode-domain</artifactId>
+                    <groupId>com.yonyou.iuap</groupId>
+                </exclusion>
+                <exclusion>
+                    <groupId>*</groupId>
+                    <artifactId>mdd-ext-common-dubbo</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+
+
+        <dependency>
+            <groupId>com.yonyou.metadata</groupId>
+            <artifactId>metadata-api-unified-sdk</artifactId>
+            <exclusions>
+                <exclusion>
+                    <groupId>com.yonyou.iuap</groupId>
+                    <artifactId>iuap-cache</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>com.yonyou.yht</groupId>
+                    <artifactId>yht-sdk</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>com.yonyou.iuap</groupId>
+                    <artifactId>iuap-utils</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+        <!-- 基础数据元数据依赖 -->
+        <dependency>
+            <groupId>com.yonyou.ucf</groupId>
+            <artifactId>basedoc-meta</artifactId>
+            <version>1.0.2-SNAPSHOT</version>
+            <type>pom</type>
+        </dependency>
+
+        <dependency>
+            <groupId>com.yonyou.cloud.hpapaas</groupId>
+            <artifactId>hpa-yonqlparser</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+
+    </dependencies>
+
+</project>

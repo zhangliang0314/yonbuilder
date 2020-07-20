@@ -1,0 +1,87 @@
+.containers{
+    background-color: #f8f8f8;
+}
+.modifyinfo_contains{
+    background-color: #fff;
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    padding-top: 0.88rem;
+}
+.mine_contains{
+    width: 100%;
+    position: relative;
+    height: 2.4rem;
+    padding-top: 1.1rem;
+
+}
+:global .my-edit-count{
+    padding: 0rem 0.3rem 0 0.5rem;
+    color: #999999;
+    text-align: left;
+    font-size: 0.26rem;
+    float: left;
+}
+:global .my-edit-count .icon-edit-copy{
+    font-size: 0.4rem;
+    margin-right: 0.1rem;
+    vertical-align: -0.05rem;
+}
+.photo_contains{
+    width: 1.3rem;
+    height: 1.3rem;
+    border-radius: 50%;
+    align-content: center;
+    justify-content: center;
+    background: #fff;
+    margin-right: 0.5rem;
+    float: right;
+}
+.photo_contains img{
+    width: 1.3rem;
+    height: 1.3rem;
+    border-radius: 50%;
+}
+.mine_contains span{
+    width: 4.38rem;
+    text-align: left;
+    font-size: 0.4rem;
+    display: block;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    color: #333;
+}
+:global .mine-member-name{
+    float: left;
+    margin-left: 0.5rem;
+    color: #333;
+    font-size: 0.5rem;
+    font-weight:500;
+    line-height: 0.7rem;
+    margin-top: 0.1rem;
+}
+.choose_panel{
+    display: flex;
+    flex-flow: column;
+    position: fixed;;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height:100%;
+    z-index: 1000;
+    background: rgba(0, 0, 0, 0.1);
+}
+.choose_btn{
+    position:fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height:auto;
+    background-color: #fff;
+}
+.choose_panel_empty{
+    flex: 1;
+    width: 100%;
+}

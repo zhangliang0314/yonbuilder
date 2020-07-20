@@ -1,0 +1,25 @@
+{
+    "apps": [{
+        "name": "MDF",
+        "cwd": "./",
+        "script": "./bin/web/server/index.js",
+        "env": {
+            "NODE_ENV": "production",
+            "SERVER_PORT": 3006,
+            "SRV_URL": "http://127.0.0.1:8000"      
+        },
+        "log_date_format": "YYYY-MM-DD HH:mm:ss",
+        "error_file": "./logs/error.log",
+        "out_file": "./logs/app.log",
+        "instances": 1,
+        "min_uptime": "60s",
+        "max_restarts": 10,
+        "max_memory_restart": "1024M",
+        "watch": false,
+        "merge_logs": true,
+        "exec_interpreter": "node",
+        "exec_mode": "fork",
+        "autorestart": true,
+        "vizion": false
+    }]
+}

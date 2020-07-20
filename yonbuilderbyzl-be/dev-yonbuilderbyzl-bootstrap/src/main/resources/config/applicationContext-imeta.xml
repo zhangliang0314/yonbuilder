@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:util="http://www.springframework.org/schema/util"
+       xmlns:context="http://www.springframework.org/schema/context" xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.3.xsd
+       http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd
+       http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-4.3.xsd"
+       default-autowire="byName">
+
+    <!--imeta -->
+    <context:component-scan base-package="org.imeta"
+                            use-default-filters="false">
+        <context:include-filter type="assignable"
+                                expression="org.imeta.core.base.MetaAware" />
+        <context:include-filter type="assignable"
+                                expression="org.imeta.orm.base.SqlBuilder" />
+        <context:include-filter type="assignable"
+                                expression="org.imeta.tpl.base.TplBean" />
+        <context:include-filter type="assignable"
+                                expression="org.imeta.spring.tpl.builder.CodeGenerateService" />
+        <context:exclude-filter type="aspectj"
+                                expression="org.imeta.tpl.builder.*.*" />
+    </context:component-scan>
+
+    <bean id="MySqlTableColumnBuilder" class="org.imeta.tpl.builder.mysql.TableColumnBuilder" />
+    <bean id="MySqlTableIndexBuilder" class="org.imeta.tpl.builder.mysql.TableIndexBuilder" />
+    <bean id="OracleTableColumnBuilder" class="org.imeta.tpl.builder.oracle.TableColumnBuilder" />
+    <bean id="OracleTableIndexBuilder" class="org.imeta.tpl.builder.oracle.TableIndexBuilder" />
+
+    <bean class="org.imeta.spring.support.profile.DomainIsolationPropertyProfile" />
+    <bean id="mysql" class="org.imeta.orm.dialect.support.MySqlDialect" />
+
+    <!-- 翻译使用 -->
+    <bean id="metaBeanFactory" class="org.imeta.spring.base.UnfiedBeanFactory">
+        <property name="configLocation" value="classpath:imeta-config.properties" />
+        <property name="localDataAccessProxy">
+            <bean class="com.yonyou.ucf.mdd.core.meta.MetaDaoDataAccessProxy" />
+        </property>
+    </bean>
+    <bean name="localDataAccessProxy" class="com.yonyou.ucf.mdd.core.meta.MetaDaoDataAccessProxy" />
+
+
+    <bean class="org.imeta.spring.support.id.IdManager">
+        <constructor-arg name="workerId" value="1" />
+        <constructor-arg name="datacenterId" value="1" />
+    </bean>
+
+    <context:component-scan base-package="com.yonyou.ucf.mdf.models" use-default-filters="false"
+                            name-generator="org.imeta.spring.bean.BizObjectBeanNameGenerator"
+                            scope-resolver="org.imeta.spring.bean.BizObjectScopeMetadataResolver">
+        <context:include-filter type="assignable" expression="org.imeta.orm.base.BizObject"/>
+    </context:component-scan>
+    <bean id="modelManager" class="org.imeta.spring.support.db.ModelManager" depends-on="metaBeanFactory" />
+
+</beans>

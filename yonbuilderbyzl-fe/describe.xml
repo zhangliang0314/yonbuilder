@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project>
+<!-- 打包器不能支持nodejs工程的子目录描述文件暂时放在外面-->
+    <name>ucf-mdf-fe</name>
+    <code>ucf-mdf-fe</code>
+    <!-- 基于gPaaS出盘，配置volume挂载及环境变量 -->
+	<serviceType>nodejs12</serviceType>
+	
+	    <nginxCustomTemplate>
+        upstream {{#package.code}} {
+            {{ #concat('server ',' weight=1 max_fails=2 fail_timeout=30s;\n',#package.nodesStr) }}
+        }
+
+        location {{#package.contextPrefix}} /developplatform/ {
+            proxy_pass http://{{#package.code}}/;
+            {{#package.contextHeader}}
+        }
+    </nginxCustomTemplate>
+	<command>
+         <!-- 对应目录为ucf_scripts/install -->
+         <start>start.sh</start>
+      </command>
+    <gPaaS>
+        <envs></envs>
+    </gPaaS>
+    <configUrls>
+    	<!-- 源码 -->
+		<configUrl>
+			<source>private/env.json</source>
+			<dest>/</dest>
+		</configUrl>
+	</configUrls>
+</project>
